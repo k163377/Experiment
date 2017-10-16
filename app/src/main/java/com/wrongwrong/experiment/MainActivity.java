@@ -26,8 +26,10 @@ public class MainActivity extends AppCompatActivity {
     private Button mButton;
     private RadioGroup mRadioGroup;
 
-    private static final String str = "aaa";
-    private static final String[] Noises = {"n1", "n2", "n3", str};
+    //private static final String str = "aaa";
+    private static final String[] Noises = {
+            FragmentShaders.FRAGMENT_SHADER
+    };
 
     protected void startCameraActivity(){
         //データを渡してActivity開始

@@ -24,15 +24,7 @@ public class Renderer implements GLSurfaceView.Renderer {
                     "    gl_Position = position;\n" +
                     "    texcoordVarying = texcoord;\n" +
                     "}\n";
-    private static final String FRAGMENT_SHADER =
-            "#extension GL_OES_EGL_image_external : require\n" +
-                    "precision mediump float;\n" +
-                    "varying vec2 texcoordVarying;\n" +
-                    "uniform samplerExternalOES texture;\n" +
-                    "void main() {\n" +
-                    "  gl_FragColor = texture2D(texture, texcoordVarying) * vec4(1.0, 1.0, 1.0, 0.0);\n" +
-                    //"  gl_FragColor = texture2D(texture, texcoordVarying);\n" +
-                    "}\n";
+    final String FRAGMENT_SHADER;
 
     private static final float TEX_COORDS_ROTATION_0[] = {
             0.0f, 0.0f,
@@ -59,8 +51,9 @@ public class Renderer implements GLSurfaceView.Renderer {
     private Camera mCamera;
     private boolean mConfigured = false;
 
-    public Renderer(Activity activity) {
+    public Renderer(Activity activity, String FRAGMENT_SHADER) {
         mActivity = activity;
+        this.FRAGMENT_SHADER = FRAGMENT_SHADER;
     }
 
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
