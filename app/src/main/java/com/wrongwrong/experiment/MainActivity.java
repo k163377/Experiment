@@ -27,14 +27,14 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup mRadioGroup;
 
     //private static final String str = "aaa";
-    private static final String[] Noises = {
-            FragmentShaders.FRAGMENT_SHADER
+    private static final String[][] Noises = {
+            {"no change", FragmentShaders.FRAGMENT_SHADER}
     };
 
     protected void startCameraActivity(){
         //データを渡してActivity開始
         Intent intent = new Intent(getApplication(), CameraActivity.class);
-        intent.putExtra("Shader", Noises[mRadioGroup.getCheckedRadioButtonId()]);
+        intent.putExtra("Shader", Noises[mRadioGroup.getCheckedRadioButtonId()][1]);
         startActivity(intent);
     }
 
@@ -68,8 +68,9 @@ public class MainActivity extends AppCompatActivity {
         //チェックされているidがノイズから受け取る番号
         for(int i = 0; i < Noises.length; i++){
             RadioButton rb = new RadioButton(this);
-            rb.setText("Noise " + i);
+            rb.setText(Noises[i][0]);
             rb.setId(i);
+            rb.setTextSize(50.0f);
             mRadioGroup.addView(
                     rb,
                     new RadioGroup.LayoutParams(
