@@ -1,6 +1,7 @@
 package com.wrongwrong.experiment;
 
 public class FragmentShaders {
+    //無処理
     public static final String FRAGMENT_SHADER =
             "#extension GL_OES_EGL_image_external : require\n" +
             "precision mediump float;\n" +
@@ -10,4 +11,5 @@ public class FragmentShaders {
             "  gl_FragColor = texture2D(texture, texcoordVarying);\n" +
             "}\n";
 
+    
 }
