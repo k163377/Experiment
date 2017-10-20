@@ -31,10 +31,10 @@ public class NoiseDistributions {
 
                     "  return f;\n"+
                     "}";
-    //指数分布 http://www.ishikawa-lab.com/montecarlo/4shou.html Math.random()は0から1
+    //指数分布 http://www.ishikawa-lab.com/montecarlo/4shou.html Math.random()は0から1 書いてある式がおかしく、logが抜けてる
     public static final String exponential_distribution =
             "float exponential_distribution(float lambda, vec2 co) {" +
-                    "  return = (-1.0) / lambda * (1.0 - rand(co));" +
+                    "  return (-1.0) / (lambda * log(1.0 - rand(co)));" +
                     "}";
 
 
