@@ -45,7 +45,7 @@ public class OtherFuncs {
                     "return rgb;\n" +
                     "}\n";
 
-    public static final String otherFuncs= sqr +
+    public static final String otherFuncs = sqr +
             fitting +
             calc_LL1 +
             tcolor_hsvtorgb +
