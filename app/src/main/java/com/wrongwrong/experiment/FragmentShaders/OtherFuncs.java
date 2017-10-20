@@ -3,7 +3,18 @@ package com.wrongwrong.experiment.FragmentShaders;
 public class OtherFuncs {
     public static final String sqr =
             "float sqr(float f){ return f * f; }\n";
-
+    //画面位置合わせ
+    public static final String fitting =
+            "vec2 fitting(vec2 txcrdV){\n" +
+                    "  const float scale = 0.27;\n" +
+                    "  vec2 v = vec2(txcrdV.x*scale + (1.0-scale)*0.5 + 0.01, txcrdV.y*scale + (1.0-scale)*0.5);\n" +
+                    "  return v;\n" +
+                    "}\n";
+    //LL1の計算
+    public static final String calcLL1 =
+            "float calcLL1(vec3 rgb){\n" +
+                    "  return rgb[1]*0.929857 - rgb[0]*0.917228 - rgb[2]*0.380058;\n" +
+                    "}\n";
 
 
     //色変換
@@ -36,6 +47,8 @@ public class OtherFuncs {
                     "}\n";
 
     public static final String otherFuncs= sqr +
+            fitting +
+            calcLL1 +
             tcolor_hsvtorgb +
             tcolor_rgbtohsv;
 }
