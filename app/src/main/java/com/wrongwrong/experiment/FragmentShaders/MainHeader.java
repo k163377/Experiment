@@ -8,7 +8,7 @@ public class MainHeader {
                     "precision highp float;\n" +
                     "varying vec2 texcoordVarying;\n" +
                     "uniform samplerExternalOES texture;\n" +
-                    //分布類
+                    //乱数・分布類
                     NoiseDistributions.noiseDistribution +
                     //その他関数
                     OtherFuncs.otherFuncs;

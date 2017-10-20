@@ -16,7 +16,6 @@ public class OtherFuncs {
                     "  return rgb[1]*0.929857 - rgb[0]*0.917228 - rgb[2]*0.380058;\n" +
                     "}\n";
 
-
     //色変換
     //rgbからhsvへの変換関数
     public static final String tcolor_rgbtohsv =

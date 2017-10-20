@@ -31,6 +31,7 @@ public class NoiseDistributions {
 
                     "  return f;\n"+
                     "}";
+    //指数分布
 
     //このファイルのノイズ関連の関数をまとめたString
     public static final String noiseDistribution = rand +
