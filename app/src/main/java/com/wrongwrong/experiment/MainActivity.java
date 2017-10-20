@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
     //フラグメントシェーダー
     private static final String[][] Noises = {
             {"no change", FragmentShaders.FRAGMENT_SHADER},
-            {"Noise 1", FragmentShaders.Noise1}
+            {"Noise 1", FragmentShaders.Noise1},
+            {"TestNoise", FragmentShaders.TestNoise}
     };
 
     //フラグメントシェーダを渡して処理開始
