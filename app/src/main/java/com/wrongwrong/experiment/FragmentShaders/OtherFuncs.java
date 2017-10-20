@@ -11,7 +11,7 @@ public class OtherFuncs {
                     "  return v;\n" +
                     "}\n";
     //LL1の計算
-    public static final String calcLL1 =
+    public static final String calc_LL1 =
             "float calcLL1(vec3 rgb){\n" +
                     "  return rgb[1]*0.929857 - rgb[0]*0.917228 - rgb[2]*0.380058;\n" +
                     "}\n";
@@ -47,7 +47,7 @@ public class OtherFuncs {
 
     public static final String otherFuncs= sqr +
             fitting +
-            calcLL1 +
+            calc_LL1 +
             tcolor_hsvtorgb +
             tcolor_rgbtohsv;
 }
