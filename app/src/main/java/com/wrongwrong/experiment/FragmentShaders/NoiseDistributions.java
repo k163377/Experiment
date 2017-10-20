@@ -31,10 +31,16 @@ public class NoiseDistributions {
 
                     "  return f;\n"+
                     "}";
-    //指数分布
+    //指数分布 http://www.ishikawa-lab.com/montecarlo/4shou.html Math.random()は0から1
+    public static final String exponential_distribution =
+            "float exponential_distribution(float lambda, vec2 co) {" +
+                    "  return = (-1.0) / lambda * (1.0 - rand(co));" +
+                    "}";
+
 
     //このファイルのノイズ関連の関数をまとめたString
     public static final String noiseDistribution = rand +
             normal_dsitribution +
-            dual_peak_normal_distribution;
+            dual_peak_normal_distribution+
+            exponential_distribution;
 }
