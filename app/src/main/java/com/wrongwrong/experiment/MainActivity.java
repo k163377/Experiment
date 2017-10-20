@@ -17,6 +17,8 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.wrongwrong.experiment.FragmentShaders.NormalCameraShader;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
     //フラグメントシェーダー
     private static final String[][] Noises = {
-            {"no change", FragmentShaders.FRAGMENT_SHADER},
-            {"Noise 1", FragmentShaders.Noise1},
-            {"TestNoise", FragmentShaders.TestNoise}
+            {"NormalCamera", NormalCameraShader.NormalCamera},
+            //{"Noise 1", FragmentShaders.Noise1},
+            //{"TestNoise", FragmentShaders.TestNoise}
     };
 
     //フラグメントシェーダを渡して処理開始
