@@ -19,7 +19,7 @@ public class NoiseDistributions {
                     "  float x = rand(co);\n" +
                     "  float y = rand(vec2(co[1], co[0]));\n" +
                     "  float f = sqrt(-2.0 * log(x)) * sin(dPi * y);\n" +
-                    "  return (f * cov) + ave;\n" +
+                    "  return (f * sqrt(cov)) + ave;\n" +
                     "}\n";
     //0を中心とした双峰ガウス分布　normal distributionに峰同士の間隔をくわえる処理有り、とりあえず1/2倍を加えたり引いたりする
     public static final String dual_peak_normal_distribution =
