@@ -29,4 +29,16 @@ public class CameraActivity extends Activity{
         glsv.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        glsv.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        glsv.onResume();
+    }
+
 }
