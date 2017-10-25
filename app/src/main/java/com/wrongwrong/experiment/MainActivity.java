@@ -18,6 +18,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.wrongwrong.experiment.FragmentShaders.NormalCameraShader;
+import com.wrongwrong.experiment.FragmentShaders.SingleNoiseShader;
 import com.wrongwrong.experiment.FragmentShaders.TestNoiseShader;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     //フラグメントシェーダー
     private static final String[][] Noises = {
             {"NormalCamera", NormalCameraShader.NormalCamera},
-            //{"Noise 1", FragmentShaders.Noise1},
+            {"SingleNoise", SingleNoiseShader.singleNoise},
             {"TestNoise", TestNoiseShader.testNoise},
     };
 
