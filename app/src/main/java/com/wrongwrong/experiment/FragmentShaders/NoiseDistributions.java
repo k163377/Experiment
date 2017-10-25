@@ -39,7 +39,7 @@ public class NoiseDistributions {
 
 
     //このファイルのノイズ関連の関数をまとめたString
-    public static final String noiseDistribution = rand +
+    public static final String noiseDistributions = rand +
             normal_dsitribution +
             dual_peak_normal_distribution+
             exponential_distribution;

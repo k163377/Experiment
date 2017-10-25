@@ -9,7 +9,7 @@ public class MainHeader {
                     "varying vec2 texcoordVarying;\n" +
                     "uniform samplerExternalOES texture;\n" +
                     //乱数・分布類
-                    NoiseDistributions.noiseDistribution +
+                    NoiseDistributions.noiseDistributions +
                     //その他関数
                     OtherFuncs.otherFuncs;
 }
