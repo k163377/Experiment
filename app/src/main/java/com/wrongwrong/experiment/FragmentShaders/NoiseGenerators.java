@@ -11,6 +11,6 @@ public class NoiseGenerators {
     //指数分布、テストでラムダは0.2
     public static final String exponential_noise =
             "float exponential_noise(vec3 rgb) {" +
-                    " return exponential_distribution(0.2, vec2(rgb.x + rgb.z, rgb.x));" +
+                    "  return exponential_distribution(0.2, vec2(rgb.x + rgb.z, rgb.x));" +
                     "}";
 }
