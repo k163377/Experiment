@@ -31,14 +31,13 @@ public class CameraActivity extends Activity{
 
     @Override
     protected void onPause() {
-        super.onPause();
         glsv.onPause();
+        super.onPause();
     }
 
     @Override
     protected void onResume() {
-        super.onResume();
         glsv.onResume();
+        super.onResume();
     }
-
 }
