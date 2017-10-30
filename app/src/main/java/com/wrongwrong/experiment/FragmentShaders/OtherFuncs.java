@@ -19,7 +19,8 @@ public class OtherFuncs {
     public static final String linearFunction =
             "float LinearFunction(float input, float slope, float intercept){\n" +
                     "  float f = (input * slope) + intercept;\n" +
-                    "  if(f > 0.0) return f;\n" +
+                    "  if(f > 1.0) return 1.0;\n" +
+                    "  else if(f > 0.0) return f;\n" +
                     "  else return 0.0;\n" +
                     "}";
 
