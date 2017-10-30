@@ -15,6 +15,13 @@ public class OtherFuncs {
             "float calc_LL1(vec3 rgb){\n" +
                     "  return rgb[1]*0.929857 - rgb[0]*0.917228 - rgb[2]*0.380058;\n" +
                     "}\n";
+    //1次関数、入力は0.0 ~ 1.0　ただしf(x)が負の場合は0.0を返している
+    public static final String linearFunction =
+            "float LinearFunction(float input, float slope, float intercept){\n" +
+                    "  float f = (input * slope) + intercept;\n" +
+                    "  if(f > 0.0) return f;\n" +
+                    "  else return 0.0;\n" +
+                    "}";
 
     //色変換
     //rgbからhsvへの変換関数
