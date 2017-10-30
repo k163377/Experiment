@@ -8,7 +8,7 @@ public class NoiseGenerators {
                     "varying vec2 texcoordVarying;\n" +
                     "uniform samplerExternalOES texture;\n";
 
-    //強度に合わせたノイズを掛ける
+    //定数ノイズ
     public static final String constNoiseP = mainHeader+
             OtherFuncs.calc_LL1+
             "vec3 ConstNoiseP(vec3 rgb, float level){" +
@@ -18,6 +18,15 @@ public class NoiseGenerators {
             "  } else rgb = vec3(0.0);\n" +
             "  return rgb;\n" +
             "}\n";
-
-
+    //比例ノイズ
+    public static final String proportionNoiseP = mainHeader+
+            OtherFuncs.calc_LL1+
+            OtherFuncs.linearFunction+
+            "vec3 ProportionNoiseP(vec3 rgb, float slope, float intercept){\n" +
+            "  float Pnoise = abs(calc_LL1(rgb))/1.297286; +\n" +
+            "  if(Pnoise > rand(vec2(rgb.x + rgb.y, rgb.y + rgb.z))) {\n" +
+            "    rgb = vec3(LinearFunction(Pnoise, slope, intercept));\n"+
+            "  } else rgb = vec3(0.0);\n" +
+            "  return rgb;\n" +
+            "}\n";
 }
