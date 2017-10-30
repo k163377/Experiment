@@ -11,6 +11,7 @@ public class NoiseGenerators {
     //定数ノイズ
     public static final String constNoiseP = mainHeader+
             OtherFuncs.calc_LL1+
+            NoiseDistributions.rand+
             "vec3 ConstNoiseP(vec3 rgb, float level){" +
             "  float Pnoise = abs(calc_LL1(rgb))/1.297286; +\n" +
             "  if(Pnoise > rand(vec2(rgb.x + rgb.y, rgb.y + rgb.z))) {\n" +
@@ -22,6 +23,7 @@ public class NoiseGenerators {
     public static final String proportionNoiseP = mainHeader+
             OtherFuncs.calc_LL1+
             OtherFuncs.linearFunction+
+            NoiseDistributions.rand+
             "vec3 ProportionNoiseP(vec3 rgb, float slope, float intercept){\n" +
             "  float Pnoise = abs(calc_LL1(rgb))/1.297286; +\n" +
             "  if(Pnoise > rand(vec2(rgb.x + rgb.y, rgb.y + rgb.z))) {\n" +
