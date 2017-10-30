@@ -7,24 +7,14 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
-import android.widget.TextView;
-
-import com.wrongwrong.experiment.FragmentShaders.NormalCameraShader;
-import com.wrongwrong.experiment.FragmentShaders.SingleNoiseShader;
-import com.wrongwrong.experiment.FragmentShaders.TestNoiseShader;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
     private ScrollView mScrollView;
     private LinearLayout mLinearLayout;
     private Button mButton;
@@ -32,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
     //フラグメントシェーダー
     private static final String[][] Noises = {
-            {"NormalCamera", NormalCameraShader.NormalCamera},
-            {"SingleNoise", SingleNoiseShader.singleNoise},
-            {"TestNoise", TestNoiseShader.testNoise},
+    //        {"NormalCamera", NormalCameraShader.NormalCamera},
+    //        {"SingleNoise", SingleNoiseShader.singleNoise},
+    //        {"TestNoise", TestNoiseShader.testNoise},
     };
 
     //フラグメントシェーダを渡して処理開始
