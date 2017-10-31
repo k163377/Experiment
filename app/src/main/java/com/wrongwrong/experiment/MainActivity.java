@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
     protected void startCameraActivity(){
         //データを渡してActivity開始
         Intent intent = new Intent(getApplication(), CameraActivity.class);
-        intent.putExtra("Shader", Enums.getShader(Enums.getEnums(mRadioGroup.getCheckedRadioButtonId())));
+        //intent.putExtra("Shader", Enums.getShader(Enums.getEnums(mRadioGroup.getCheckedRadioButtonId())));
+        intent.putExtra("Shader", Enums.getEnums(mRadioGroup.getCheckedRadioButtonId()));
         startActivity(intent);
     }
 

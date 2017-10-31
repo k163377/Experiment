@@ -15,7 +15,8 @@ public class CameraActivity extends Activity{
         super.onCreate(savedInstanceState);
         //シェーダーを取得して開始
         Intent intent = getIntent();
-        Renderer r = new Renderer(this, intent.getStringExtra("Shader"));
+        //Renderer r = new Renderer(this, intent.getStringExtra("Shader"));
+        Renderer r = new Renderer(this, Enums.getShader((Enums)intent.getSerializableExtra("Shader")));
 
         glsv = new GLSurfaceView(this);
         glsv.setEGLContextClientVersion(3);
