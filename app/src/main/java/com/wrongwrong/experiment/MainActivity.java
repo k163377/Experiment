@@ -16,24 +16,19 @@ import android.widget.ScrollView;
 
 import com.wrongwrong.experiment.FragmentShaders.TestNoiseShader;
 
+import java.util.EnumMap;
+
 public class MainActivity extends AppCompatActivity {
     private ScrollView mScrollView;
     private LinearLayout mLinearLayout;
     private Button mButton;
     private RadioGroup mRadioGroup;
 
-    //フラグメントシェーダー
-    private static final String[][] Noises = {
-    //        {"NormalCamera", NormalCameraShader.NormalCamera},
-    //        {"SingleNoise", SingleNoiseShader.singleNoise},
-            {"TestNoise", TestNoiseShader.testNoise},
-    };
-
     //フラグメントシェーダを渡して処理開始
     protected void startCameraActivity(){
         //データを渡してActivity開始
         Intent intent = new Intent(getApplication(), CameraActivity.class);
-        intent.putExtra("Shader", Noises[mRadioGroup.getCheckedRadioButtonId()][1]);
+        intent.putExtra("Shader", Enums.getShader(Enums.getEnums(mRadioGroup.getCheckedRadioButtonId())));
         startActivity(intent);
     }
 
@@ -66,11 +61,11 @@ public class MainActivity extends AppCompatActivity {
         //ラジオボタンの設定
         mRadioGroup = new RadioGroup(this);
         //チェックされているidがノイズから受け取る番号
-        for(int i = 0; i < Noises.length; i++){
+        for(Enums e : Enums.ShaderTitle.keySet()){
             RadioButton rb = new RadioButton(this);
             rb.setTextSize(50.0f);
-            rb.setText(Noises[i][0]);
-            rb.setId(i);
+            rb.setText(Enums.getTitle(e));
+            rb.setId(e.ordinal());
             mRadioGroup.addView(
                     rb,
                     new RadioGroup.LayoutParams(
