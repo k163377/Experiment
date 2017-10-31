@@ -11,7 +11,7 @@ public enum Enums {
     ConstantPNoise8,
     ConstantPNoise10;
 
-    private static final EnumMap<Enums, String> ShaderTitle;
+    public static final EnumMap<Enums, String> ShaderTitle;
     static{
         ShaderTitle = new EnumMap<Enums, String>(Enums.class);
         ShaderTitle.put(Enums.TestNoise, "TestNoise");
@@ -33,5 +33,12 @@ public enum Enums {
     }
     public static String getShader(Enums e){
         return Shader.get(e);
+    }
+
+    public static Enums getEnums(int ordinal){
+        for(Enums e : ShaderTitle.keySet()) {
+            if(e.ordinal() == ordinal) return e;
+        }
+        return null;
     }
 }
