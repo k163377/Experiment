@@ -14,6 +14,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 
+import com.wrongwrong.experiment.FragmentShaders.TestNoiseShader;
+
 public class MainActivity extends AppCompatActivity {
     private ScrollView mScrollView;
     private LinearLayout mLinearLayout;
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String[][] Noises = {
     //        {"NormalCamera", NormalCameraShader.NormalCamera},
     //        {"SingleNoise", SingleNoiseShader.singleNoise},
-    //        {"TestNoise", TestNoiseShader.testNoise},
+            {"TestNoise", TestNoiseShader.testNoise},
     };
 
     //フラグメントシェーダを渡して処理開始
