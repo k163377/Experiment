@@ -13,7 +13,7 @@ public class NoiseGenerators {
             OtherFuncs.calc_LL1+
             NoiseDistributions.rand+
             "vec3 ConstNoiseP(vec3 rgb, float level){\n" +
-            "  float Pnoise = abs(calc_LL1(rgb))/1.297286; +\n" +
+            "  float Pnoise = abs(calc_LL1(rgb))/1.297286;\n" +
             "  if(Pnoise > rand(vec2(rgb.x + rgb.y, rgb.y + rgb.z))) {\n" +
             "    rgb = vec3(Pnoise * level);\n"+
             "  } "+//else rgb = vec3(0.0);\n" +
@@ -25,7 +25,7 @@ public class NoiseGenerators {
             OtherFuncs.linearFunction+
             NoiseDistributions.rand+
             "vec3 ProportionNoiseP(vec3 rgb, float slope, float intercept){\n" +
-            "  float Pnoise = abs(calc_LL1(rgb))/1.297286; +\n" +
+            "  float Pnoise = abs(calc_LL1(rgb))/1.297286;\n" +
             "  if(Pnoise > rand(vec2(rgb.x + rgb.y, rgb.y + rgb.z))) {\n" +
             "    rgb = vec3(LinearFunction(Pnoise, slope, intercept));\n"+
             "  } else rgb = vec3(0.0);\n" +
