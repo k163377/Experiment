@@ -16,13 +16,13 @@ public class OtherFuncs {
                     "  return rgb[1]*0.929857 - rgb[0]*0.917228 - rgb[2]*0.380058;\n" +
                     "}\n";
     //1次関数、入力は0.0 ~ 1.0　ただしf(x)が負の場合は0.0を返している
-    public static final String linearFunction =
-            "float LinearFunction(float input, float slope, float intercept){\n" +
-                    "  float f = (input * slope) + intercept;\n" +
-                    "  if(f > 1.0) return 1.0;\n" +
-                    "  else if(f > 0.0) return f;\n" +
-                    "  else return 0.0;\n" +
-                    "}";
+    public static final String linear_function =
+            "float linear_function(float input, float slope, float intercept){\n" +
+                    //"  float f = (input * slope) + intercept;\n" +
+                    //"  if(f > 1.0) return 1.0;\n" +
+                    //"  if(f > 0.0) return f;\n" +
+                    "  return 0.0;\n" +
+                    "}\n";
 
     //色変換
     //rgbからhsvへの変換関数
