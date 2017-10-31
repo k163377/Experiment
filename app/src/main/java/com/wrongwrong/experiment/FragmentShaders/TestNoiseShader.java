@@ -5,7 +5,7 @@ public class TestNoiseShader {
             OtherFuncs.fitting+
             "void main() {\n" +
             "  vec4 v = texture2D(texture, fitting(texcoordVarying));" +
-            //"  v.xyz = ConstNoiseP(v.xyz, 0.5);" +
+            "  v.xyz = ConstNoiseP(v.xyz, 0.5);" +
             "  gl_FragColor = v;" +
             "}\n";
 }
