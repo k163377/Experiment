@@ -17,7 +17,7 @@ public class OtherFuncs {
                     "}\n";
     //1次関数、入力は0.0 ~ 1.0　ただしf(x)が負の場合は0.0を返している
     public static final String linear_function =
-            "float linear_function(float input, float slope, float intercept){\n" +
+            "float linear_function(float input, float slope, froat intercept){\n" +
                     //"  float f = (input * slope) + intercept;\n" +
                     //"  if(f > 1.0) return 1.0;\n" +
                     //"  if(f > 0.0) return f;\n" +

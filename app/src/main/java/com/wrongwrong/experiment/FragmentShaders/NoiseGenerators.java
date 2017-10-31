@@ -23,12 +23,12 @@ public class NoiseGenerators {
     //比例ノイズ
     public static final String proportionNoiseP = mainHeader+
             OtherFuncs.calc_LL1+
-            OtherFuncs.linearFunction+
+            OtherFuncs.linear_function+
             "vec3 ProportionNoiseP(vec3 rgb, float slope, float intercept){\n" +
             "  float Pnoise = abs(calc_LL1(rgb))/1.297286;\n" +
-            "  if(Pnoise > rand(vec2(rgb.x + rgb.y, rgb.y + rgb.z))) {\n" +
-            "    rgb = vec3(LinearFunction(Pnoise, slope, intercept));\n"+
-            "  } else rgb = vec3(0.0);\n" +
+            //"  if(Pnoise > rand(vec2(rgb.x + rgb.y, rgb.y + rgb.z))) {\n" +
+            //"    rgb = vec3(linear_function(Pnoise, slope, intercept));\n"+
+            //"  } else rgb = vec3(0.0);\n" +
             "  return rgb;\n" +
             "}\n";
 }
