@@ -16,7 +16,7 @@ public class NoiseGenerators {
             "vec3 ConstNoiseP(vec3 rgb, float level){\n" +
             "  float Pnoise = abs(calc_LL1(rgb))/1.297286;\n" +
             "  if(Pnoise > rand(vec2(rgb.x + rgb.y, rgb.y + rgb.z))) {\n" +
-            "    rgb = vec3(Pnoise * level);\n"+
+            "    rgb = vec3(level);\n"+
             "  } else rgb = vec3(0.0);\n" +
             "  return rgb;\n" +
             "}\n";
