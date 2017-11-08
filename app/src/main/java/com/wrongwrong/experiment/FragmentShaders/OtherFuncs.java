@@ -13,7 +13,7 @@ public class OtherFuncs {
     //LL1の計算
     public static final String calc_LL1 =
             "float calc_LL1(vec3 rgb){\n" +
-                    "  return rgb[1]*0.929857 - rgb[0]*0.917228 - rgb[2]*0.380058;\n" +
+                    "  return rgb[0]*0.917228 - rgb[1]*0.929857 + rgb[2]*0.380058;\n" +
                     "}\n";
     //1次関数、入力は0.0 ~ 1.0　ただしf(x)が負の場合は0.0を返している
     public static final String linear_function =
