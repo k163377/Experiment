@@ -9,13 +9,13 @@ import android.view.WindowManager;
 
 public class CameraActivity extends Activity{
     GLSurfaceView glsv;
+    //Enums m;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         //シェーダーを取得して開始
         Intent intent = getIntent();
-        //Renderer r = new Renderer(this, intent.getStringExtra("Shader"));
         Renderer r = new Renderer(this, Enums.getShader((Enums)intent.getSerializableExtra("Shader")));
 
         glsv = new GLSurfaceView(this);
