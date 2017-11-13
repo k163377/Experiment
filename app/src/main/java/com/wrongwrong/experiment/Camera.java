@@ -59,12 +59,14 @@ public class Camera {
         @Override
         public void onDisconnected(@NonNull CameraDevice camera) {
             camera.close();
+            mCamera.close();
             mCamera = null;
         }
 
         @Override
         public void onError(@NonNull CameraDevice camera, int error) {
             camera.close();
+            mCamera.close();
             mCamera = null;
         }
     };
