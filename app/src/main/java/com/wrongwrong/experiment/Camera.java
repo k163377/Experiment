@@ -158,14 +158,6 @@ public class Camera {
         mActivity.getWindowManager().getDefaultDisplay().getSize(displaySize);
 
         mImageSize = new Size(1280, 720);
-        /*if (displaySize.x > displaySize.y) {
-            double scale = (double) displaySize.y / (double) mCameraSize.getHeight();
-            //mImageSize = new Size((int)(scale * mCameraSize.getWidth()), (int)(scale * mCameraSize.getHeight()));
-            mImageSize = new Size(1280, 720);
-        } else {
-            double scale = (double) displaySize.x / (double) mCameraSize.getHeight();
-            mImageSize = new Size((int)(scale * mCameraSize.getHeight()), (int)(scale * mCameraSize.getWidth()));
-        }*/
 
         int orientation = mActivity.getWindowManager().getDefaultDisplay().getRotation();
         switch(orientation) {
