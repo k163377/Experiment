@@ -19,9 +19,16 @@ public class OtherFuncs {
     public static final String linear_function =
             "float linear_function(float x, float slope, float intercept){\n" +
                     "  float f = (x * slope) + intercept;\n" +
-                    "  if(f > 1.0) return 1.0;\n" +
-                    "  if(f > 0.0) return f;\n" +
-                    "  return 0.0;\n" +
+                    "  return clamp(f, 0.0, 1.0);\n" +
+                    //"  if(f > 1.0) return 1.0;\n" +
+                    //"  if(f > 0.0) return f;\n" +
+                    //"  return 0.0;\n" +
+                    "}\n";
+
+    //2次関数、f(x) = a(x−p)^2 + qに従う値を返す
+    public static final String quadratic_function =
+            "float quadratic_function(float x, float a, float p, float q){\n" +
+                    "  float f = (a * sqr(x - p)) + q"+
                     "}\n";
 
     //色変換
