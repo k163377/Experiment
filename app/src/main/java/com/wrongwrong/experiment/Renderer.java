@@ -51,9 +51,9 @@ public class Renderer implements GLSurfaceView.Renderer {
     private Camera mCamera;
     private boolean mConfigured = false;
 
-    public Renderer(Activity activity, String FRAGMENT_SHADER) {
+    public Renderer(Activity activity, Enums m) {
         mActivity = activity;
-        this.FRAGMENT_SHADER = FRAGMENT_SHADER;
+        this.FRAGMENT_SHADER = Enums.getShader(m);
     }
 
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
