@@ -31,4 +31,17 @@ public class NoiseGenerators {
             "  } else rgb = vec3(0.0);\n" +
             "  return rgb;\n" +
             "}\n";
+    //2乗ノイズ
+    public static final String quadraticNoiseP = mainHeader+
+            OtherFuncs.calc_LL1+
+            OtherFuncs.quadratic_function+
+            "vec3 QuadraticNoiseP(vec3 rgb, float a, float p, float q){\n" +
+            "  float Pnoise = abs(calc_LL1(rgb))/1.297286;\n" +
+            "  if(Pnoise > rand(vec2(rgb.x + rgb.y, rgb.y + rgb.z))) {\n" +
+            "    rgb = vec3(quadratic_function(Pnoise, a, p, q));\n"+
+            "  } else rgb = vec3(0.0);\n" +
+            "  return rgb;\n" +
+            "}\n";
+
+
 }
