@@ -42,4 +42,9 @@ public class CameraActivity extends Activity{
         glsv.onResume();
         super.onResume();
     }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+    }
 }
