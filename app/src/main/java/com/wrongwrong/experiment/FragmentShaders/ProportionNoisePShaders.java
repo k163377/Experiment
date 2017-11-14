@@ -8,7 +8,7 @@ public class ProportionNoisePShaders {
             "  gl_FragColor = v;" +
             "}\n";
 
-    public static final String ProportionNoiseP5_5 = NoiseGenerators.proportionNoiseP+
+    /*public static final String ProportionNoiseP5_5 = NoiseGenerators.proportionNoiseP+
             "void main() {\n" +
             "  vec4 v = texture2D(texture, fitting(texcoordVarying));" +
             "  v.xyz = ProportionNoiseP(v.xyz, 0.5, 0.5);" +
@@ -20,5 +20,5 @@ public class ProportionNoisePShaders {
             "  vec4 v = texture2D(texture, fitting(texcoordVarying));" +
             "  v.xyz = ProportionNoiseP(v.xyz, 2.0, -1.0);" +
             "  gl_FragColor = v;" +
-            "}\n";
+            "}\n";*/
 }

@@ -13,8 +13,8 @@ public enum Enums {
     //ConstantPNoise6,
     //ConstantPNoise8,
     ProportionNoiseP10_0,
-    ProportionNoiseP5_5,
-    ProportionNoiseP20__10,
+    //ProportionNoiseP5_5,
+    //ProportionNoiseP20__10,
     QuadraticNoiseP10_0_0;
 
     public static final EnumMap<Enums, String> ShaderTitle;
@@ -25,8 +25,8 @@ public enum Enums {
         //ShaderTitle.put(Enums.ConstantPNoise6, "ConstantPNoise6");
         //ShaderTitle.put(Enums.ConstantPNoise8, "ConstantPNoise8");
         ShaderTitle.put(Enums.ProportionNoiseP10_0, "ProportionNoiseP10_0");
-        ShaderTitle.put(Enums.ProportionNoiseP5_5, "ProportionNoiseP5_5");
-        ShaderTitle.put(Enums.ProportionNoiseP20__10, "ProportionNoiseP20__10");
+        //ShaderTitle.put(Enums.ProportionNoiseP5_5, "ProportionNoiseP5_5");
+        //ShaderTitle.put(Enums.ProportionNoiseP20__10, "ProportionNoiseP20__10");
         ShaderTitle.put(Enums.QuadraticNoiseP10_0_0, "QuadraticNoiseP10_0_0");
     }
     public static String getTitle(Enums e){
@@ -41,8 +41,8 @@ public enum Enums {
         //Shader.put(Enums.ConstantPNoise6, ConstNoisePShaders.ConstNoiseP6);
         //Shader.put(Enums.ConstantPNoise8, ConstNoisePShaders.ConstNoiseP8);
         Shader.put(Enums.ProportionNoiseP10_0, ProportionNoisePShaders.ProportionNoiseP10_0);
-        Shader.put(Enums.ProportionNoiseP5_5, ProportionNoisePShaders.ProportionNoiseP5_5);
-        Shader.put(Enums.ProportionNoiseP20__10, ProportionNoisePShaders.ProportionNoiseP20__10);
+        //Shader.put(Enums.ProportionNoiseP5_5, ProportionNoisePShaders.ProportionNoiseP5_5);
+        //Shader.put(Enums.ProportionNoiseP20__10, ProportionNoisePShaders.ProportionNoiseP20__10);
         Shader.put(Enums.QuadraticNoiseP10_0_0, QuadraticNoisePShaders.QuadraticNoiseP10_0_0);
     }
     public static String getShader(Enums e){
