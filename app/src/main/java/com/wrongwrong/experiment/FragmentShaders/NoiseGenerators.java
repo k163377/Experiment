@@ -9,7 +9,6 @@ public class NoiseGenerators {
                     "uniform samplerExternalOES texture;\n"+
                     NoiseDistributions.rand+
                     OtherFuncs.fitting;
-
     //定数ノイズ
     public static final String constNoiseP = mainHeader+
             OtherFuncs.calc_LL1+

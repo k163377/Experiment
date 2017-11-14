@@ -23,7 +23,7 @@ public class OtherFuncs {
                     "}\n";
 
     //2次関数、f(x) = a(x−p)^2 + qに従う値を返す
-    public static final String quadratic_function =
+    public static final String quadratic_function = sqr +
             "float quadratic_function(float x, float a, float p, float q){\n" +
                     "  float f = (a * sqr(x - p)) + q;\n" +
                     "  return clamp(f, 0.0, 1.0);\n" +
