@@ -2,6 +2,7 @@ package com.wrongwrong.experiment;
 
 import com.wrongwrong.experiment.FragmentShaders.ConstNoisePShaders;
 import com.wrongwrong.experiment.FragmentShaders.ProportionNoisePShaders;
+import com.wrongwrong.experiment.FragmentShaders.QuadraticNoisePShaders;
 import com.wrongwrong.experiment.FragmentShaders.TestNoiseShader;
 
 import java.util.EnumMap;
@@ -13,7 +14,8 @@ public enum Enums {
     //ConstantPNoise8,
     ProportionNoiseP10_0,
     ProportionNoiseP5_5,
-    ProportionNoiseP20__10;
+    ProportionNoiseP20__10,
+    QuadraticNoiseP10_0_0;
 
     public static final EnumMap<Enums, String> ShaderTitle;
     static{
@@ -25,6 +27,7 @@ public enum Enums {
         ShaderTitle.put(Enums.ProportionNoiseP10_0, "ProportionNoiseP10_0");
         ShaderTitle.put(Enums.ProportionNoiseP5_5, "ProportionNoiseP5_5");
         ShaderTitle.put(Enums.ProportionNoiseP20__10, "ProportionNoiseP20__10");
+        ShaderTitle.put(Enums.QuadraticNoiseP10_0_0, "QuadraticNoiseP10_0_0");
     }
     public static String getTitle(Enums e){
         return ShaderTitle.get(e);
@@ -40,6 +43,7 @@ public enum Enums {
         Shader.put(Enums.ProportionNoiseP10_0, ProportionNoisePShaders.ProportionNoiseP10_0);
         Shader.put(Enums.ProportionNoiseP5_5, ProportionNoisePShaders.ProportionNoiseP5_5);
         Shader.put(Enums.ProportionNoiseP20__10, ProportionNoisePShaders.ProportionNoiseP20__10);
+        Shader.put(Enums.QuadraticNoiseP10_0_0, QuadraticNoisePShaders.QuadraticNoiseP10_0_0);
     }
     public static String getShader(Enums e){
         return Shader.get(e);
