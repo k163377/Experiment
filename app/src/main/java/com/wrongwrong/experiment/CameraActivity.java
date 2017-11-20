@@ -24,9 +24,6 @@ public class CameraActivity extends Activity{
         glsv.setRenderer(r);
 
         setContentView(glsv);
-
-        //上のフルスク
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         
         //上から
         //ナビゲーションバーを隠す
