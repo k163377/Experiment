@@ -7,7 +7,9 @@ public class OtherFuncs {
     public static final String fitting =
             "vec2 fitting(vec2 txcrdV){\n" +
                     "  const float scale = 0.27;\n" +
-                    "  vec2 v = vec2(txcrdV.x*scale + (1.0-scale)*0.5 + 0.01, txcrdV.y*scale + (1.0-scale)*0.5);\n" +
+                    "  const float fx = (1.0-scale+0.04)*0.5;\n" +
+                    "  const float fy = (1.0-scale+0.04)*0.5;\n" +
+                    "vec2 v = vec2(txcrdV.x*scale + fx, txcrdV.y*scale + fy);\n" +
                     "  return v;\n" +
                     "}\n";
     //LL1の計算
